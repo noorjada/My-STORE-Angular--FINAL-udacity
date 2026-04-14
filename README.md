@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MyStore - E-Commerce Application
 
 A modern, fully-functional e-commerce single-page application built with Angular. Browse products, add items to your cart, and complete a secure checkout process with user authentication.
@@ -354,3 +355,6 @@ src/app/
 - TypeScript
 - RxJS
 - CSS (custom, no frameworks)
+=======
+# My-store-Angular--udacity
+>>>>>>> 56a64676ba87e270324b1ceb5b70052217df7e9e

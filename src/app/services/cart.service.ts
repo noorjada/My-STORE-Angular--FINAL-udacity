@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { CartItem } from '../models/cart-item';
 import { Product } from '../models/product';
 import { AuthService } from './auth.service';
@@ -64,25 +64,27 @@ export class CartService {
         this.cartSubject.next([]);
     }
 
-    // Submit order to backend
+    // Submit order to mock backend
     submitOrder(): Observable<any> {
         const token = this.authService.getToken();
         const currentUser = this.authService.getCurrentUser();
-        
+
         if (!token || !currentUser) {
             throw new Error('User must be authenticated');
         }
 
-        const headers = new HttpHeaders({
-            'Authorization': `Bearer ${token}`
-        });
-
-        // Create order payload
+        // Create order payload mockup
         const order = {
+            id: Math.floor(Math.random() * 1000).toString(),
             userId: currentUser.id,
-            status: 'active'
+            status: 'active',
+            items: [...this.items],
+            total: this.getTotal(),
+            createdAt: new Date()
         };
 
-        return this.http.post<any>(this.apiUrl, order, { headers });
+        console.log('Order submitted (mock):', order);
+        this.clearCart();
+        return of(order);
     }
 }

@@ -1,58 +1,56 @@
-[
+{
+  "products": [
     {
-        "id": 1,
-        "name": "Classic Leather Jacket",
-        "price": 199.99,
-        "url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
-        "description": "A timeless leather jacket crafted from premium full-grain leather. Features a classic moto design with zippered pockets and adjustable waist tabs. Perfect for adding an edge to any outfit."
+      "id": 1,
+      "name": "Classic Leather Jacket",
+      "price": 199.99,
+      "url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+      "description": "A timeless leather jacket."
     },
     {
-        "id": 2,
-        "name": "Wireless Noise-Cancelling Headphones",
-        "price": 349.99,
-        "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
-        "description": "Experience crystal-clear audio with industry-leading noise cancellation. Up to 30 hours of battery life, plush ear cushions, and seamless Bluetooth 5.0 connectivity."
+      "id": 2,
+      "name": "Wireless Headphones",
+      "price": 349.99,
+      "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+      "description": "Noise cancelling headphones."
     },
     {
-        "id": 3,
-        "name": "Minimalist Analog Watch",
-        "price": 129.99,
-        "url": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400",
-        "description": "A sleek, minimalist timepiece with a genuine leather strap. Japanese quartz movement ensures precise timekeeping. Water-resistant up to 30 meters."
+      "id": 3,
+      "name": "Minimalist Analog Watch",
+      "price": 129.99,
+      "url": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400",
+      "description": "A sleek, minimalist timepiece with a genuine leather strap. Japanese quartz movement ensures precise timekeeping. Water-resistant up to 30 meters."
     },
     {
-        "id": 4,
-        "name": "Premium Running Shoes",
-        "price": 159.99,
-        "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
-        "description": "Engineered for performance with responsive cushioning and breathable mesh upper. Lightweight design with superior grip for road and trail running."
+      "id": 5,
+      "name": "Smart Fitness Tracker",
+      "price": 89.99,
+      "url": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400",
+      "description": "Track your health and fitness goals with heart rate monitoring, sleep tracking, and GPS. 7-day battery life with a vibrant AMOLED display."
     },
     {
-        "id": 5,
-        "name": "Smart Fitness Tracker",
-        "price": 89.99,
-        "url": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400",
-        "description": "Track your health and fitness goals with heart rate monitoring, sleep tracking, and GPS. 7-day battery life with a vibrant AMOLED display."
+      "id": 6,
+      "name": "Canvas Backpack",
+      "price": 79.99,
+      "url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400",
+      "description": "Durable waxed canvas backpack with padded laptop compartment. Multiple organizer pockets and adjustable ergonomic straps for all-day comfort."
     },
     {
-        "id": 6,
-        "name": "Canvas Backpack",
-        "price": 79.99,
-        "url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400",
-        "description": "Durable waxed canvas backpack with padded laptop compartment. Multiple organizer pockets and adjustable ergonomic straps for all-day comfort."
+      "id": 7,
+      "name": "Polarized Aviator Sunglasses",
+      "price": 64.99,
+      "url": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400",
+      "description": "Classic aviator frames with polarized UV400 lenses. Lightweight metal construction with spring hinges for a comfortable, secure fit."
     },
     {
-        "id": 7,
-        "name": "Polarized Aviator Sunglasses",
-        "price": 64.99,
-        "url": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400",
-        "description": "Classic aviator frames with polarized UV400 lenses. Lightweight metal construction with spring hinges for a comfortable, secure fit."
-    },
-    {
-        "id": 8,
-        "name": "Portable Bluetooth Speaker",
-        "price": 49.99,
-        "url": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400",
-        "description": "Compact yet powerful speaker with 360-degree sound. IPX7 waterproof rating, 12-hour playtime, and built-in microphone for hands-free calls."
+      "id": 8,
+      "name": "Portable Bluetooth Speaker",
+      "price": 49.99,
+      "url": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400",
+      "description": "Compact yet powerful speaker with 360-degree sound. IPX7 waterproof rating, 12-hour playtime, and built-in microphone for hands-free calls."
     }
-]
+  ],
+  "users": [],
+  "cart": [],
+  "orders": []
+}

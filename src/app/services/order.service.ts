@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Order } from '../models/order';
 
 @Injectable({
@@ -20,6 +20,7 @@ export class OrderService {
   }
 
   getAllOrders(): Observable<Order[]> {
-    return this.http.get<Order[]>(this.apiUrl, { headers: this.getAuthHeaders() });
+    // Return empty mock orders for standalone mode
+    return of([]);
   }
 }

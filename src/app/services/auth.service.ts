@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AuthResponse, User } from '../models/user';
 
@@ -22,57 +22,35 @@ export class AuthService {
   }
 
   register(email: string, firstName: string, lastName: string, password: string): Observable<AuthResponse> {
-    return this.http.post<any>(`${this.apiUrl}/users`, {
-      email,
-      firstName,
-      lastName,
-      password
-    }).pipe(
-      map(response => {
-        if (response && response.token) {
-          const authResponse: AuthResponse = {
-            token: response.token,
-            user: {
-              id: response.user?.id || response.id,
-              email: response.user?.email || email,
-              firstName: response.user?.firstName || response.user?.first_name || firstName,
-              lastName: response.user?.lastName || response.user?.last_name || lastName,
-              isAdmin: response.user?.is_admin || false,
-              createdAt: new Date()
-            }
-          };
-          this.setCurrentUser(authResponse);
-          return authResponse;
-        }
-        throw new Error('No token in response');
-      })
-    );
+    const authResponse: AuthResponse = {
+      token: this.generateToken(),
+      user: {
+        id: Math.floor(Math.random() * 1000).toString(),
+        email,
+        firstName,
+        lastName,
+        isAdmin: false,
+        createdAt: new Date()
+      }
+    };
+    this.setCurrentUser(authResponse);
+    return of(authResponse);
   }
 
   login(email: string, password: string): Observable<AuthResponse> {
-    return this.http.post<any>(`${this.apiUrl}/users/authenticate`, {
-      email,
-      password
-    }).pipe(
-      map(response => {
-        if (response && response.token) {
-          const authResponse: AuthResponse = {
-            token: response.token,
-            user: {
-              id: response.user?.id || response.id,
-              email: response.user?.email || email,
-              firstName: response.user?.firstName || response.user?.first_name || response.firstName,
-              lastName: response.user?.lastName || response.user?.last_name || response.lastName,
-              isAdmin: response.user?.is_admin || false,
-              createdAt: new Date()
-            }
-          };
-          this.setCurrentUser(authResponse);
-          return authResponse;
-        }
-        throw new Error('No token in response');
-      })
-    );
+    const authResponse: AuthResponse = {
+      token: this.generateToken(),
+      user: {
+        id: '1', // Mock User ID
+        email,
+        firstName: 'Test',
+        lastName: 'User',
+        isAdmin: true, // Mocking admin access as shown in previous requests
+        createdAt: new Date()
+      }
+    };
+    this.setCurrentUser(authResponse);
+    return of(authResponse);
   }
 
   logout(): void {
